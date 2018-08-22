@@ -1,0 +1,24 @@
+<div *ngIf="false">
+    <img src={{image.earth}} alt="No Image" style="width:80px;height:60px"><br>  <br>
+    <label for="">{{campaigntitle}}{{hdmi}}</label><br>  <br>
+    <label for="">User is {{user}}</label><br> <br>
+    <label >Likes = {{likes}}</label><br> <br>
+    <label *ngIf='user'>Hello</label><br> <br>
+    <button (click) = onLikeListener()>Like</button><br>  <br>
+    <button (click) = onClickListener()>Confirm</button><br>  <br>
+    <button (click) = "setToken()">Set Token</button><br> <br>
+</div>
+
+<div>
+    <button (click)="setAsc()">High To Low</button> <br> <br>
+    <button (click)="setDsc()">Low To High</button> <br> <br>
+    <input type="checkbox">Exclude Expired
+    <div *ngFor='let n of campaigns' >
+        <label>Campaign ID:{{n.id}}</label><br> <br>
+        <label>Campaign Title :{{n.title}}</label><br> <br>
+        <label>Campaign Likes :{{n.likes}}</label><br> <br>
+    </div>
+       
+</div>
+
+
